@@ -1,10 +1,12 @@
-import './tailwind.css';
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+import Home from './pages/Homepage/Home';
 
 function App() {
   return (
-    <div>
-      <p>hello world</p>
-    </div>
+    <Switch>
+      <Route exact path="/" component={ Home }/>
+    </Switch>
   );
 }
 
