@@ -12,7 +12,7 @@ const searchSlice = createSlice({
   name: 'search',
   initialState: {
     list: [],
-    status: null,
+    status: 'loading',
   },
   extraReducers: {
     [getSearch.pending]: (state, action) => {

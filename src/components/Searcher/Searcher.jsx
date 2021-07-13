@@ -27,7 +27,11 @@ const Searcher = () => {
     <>
       <input type="text" placeholder={placeholder} onChange={ inputHandler }/>
       <label name="relevance">Relevance
-        <input name="relevance" checked={ relevance } onChange={ searchWithRelevance } type="checkbox" />
+        <input
+        name="relevance"
+        checked={ relevance }
+        onChange={ searchWithRelevance }
+        type="checkbox" />
       </label>
       <button type="button" onClick={ requireApi }><FaSearch /></button>
     </>
