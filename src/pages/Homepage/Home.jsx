@@ -1,10 +1,10 @@
 import React from 'react';
-import Searcher from '../../components/Searcher/Searcher';
+import Header from '../../components/Header/Header'
 
 const Home = () => {
   return (
     <div>
-      <Searcher />
+      <Header />
     </div>
   )
 }
