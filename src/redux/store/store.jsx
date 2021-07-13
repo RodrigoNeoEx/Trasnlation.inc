@@ -1,12 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { mejorconsalud } from '../../services/requestApi';
+import searchReducer from '../slicers/searchSlice';
+import singleIDReducer from '../slicers/singleById';
 
 const store = configureStore({
   reducer: {
-    [mejorconsalud.reducerPath]: mejorconsalud.reducer
+    search: searchReducer,
+    single: singleIDReducer,
   },
-  middleware: (getDefaultMiddleware) =>
-  getDefaultMiddleware().concat(mejorconsalud.middleware)
 })
 
 export default store;
