@@ -7,6 +7,7 @@ const Searcher = () => {
   const dispatch = useDispatch()
   const [relevance, setRelevance] = useState(false);
   const [input, setInput] = useState();
+  const placeholder = 'Busca artículos, noticias, enfermidades, etc...';
 
   const searchWithRelevance = () => {
     !relevance ? setRelevance(true) : setRelevance(false);
@@ -24,7 +25,7 @@ const Searcher = () => {
 
   return (
     <>
-      <input type="text" placeholder="your search here" onChange={ inputHandler }/>
+      <input type="text" placeholder={placeholder} onChange={ inputHandler }/>
       <label name="relevance">Relevance
         <input name="relevance" checked={ relevance } onChange={ searchWithRelevance } type="checkbox" />
       </label>
