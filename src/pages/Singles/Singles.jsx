@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from '../../components/Header/Header';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { getSingleById } from '../../redux/slicers/singleById'
@@ -14,12 +15,13 @@ const Singles = () => {
        <>{ data.map((single) => {
          return (
         <article key={single.id}>
-          <h2>{single.title}</h2>
-          <h4>{single.headline}</h4>
+          <title>{single.title}</title>
+          <h1>{single.headline}</h1>
           <img src={single.featured_media.thumbnail} alt="card img"/>
           <Link to={`/single/${single.id}`}>
             <button onClick={ () => dispatch(getSingleById(single.id)) }>Details</button>
           </Link>
+          <hr/>
         </article>
         )
       })}
@@ -28,11 +30,14 @@ const Singles = () => {
   }
 
   return (
-    <>
+    <main>
+    <Header />
     <p>Artigos: {size}</p>
     <p>Paginas: {pages}</p>
-    {status === 'loading' ? <p>Loading...</p> : renderResults()}
-    </>
+      <section>
+        {status === 'loading' ? <p>Loading...</p> : renderResults()}
+      </section>
+    </main>
   )
 }
 

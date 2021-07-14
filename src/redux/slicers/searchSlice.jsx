@@ -6,7 +6,7 @@ export const getSearch = createAsyncThunk(
     return fetch(`https://api.beta.mejorconsalud.com/wp-json/mc/v2/posts?search=${input}`)
     .then( res => res.json())
   }
-)
+);
 
 const searchSlice = createSlice({
   name: 'search',
@@ -26,6 +26,6 @@ const searchSlice = createSlice({
       state.status = 'failed'
     },
   },
-})
+});
 
 export default searchSlice.reducer;
