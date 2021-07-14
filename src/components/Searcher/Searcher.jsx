@@ -15,11 +15,11 @@ const Searcher = () => {
   }
 
   function requireApi() {
-    const teste1 = `${input}&page=${page}`
-    const teste2 = `${teste1}&orderby=relevance`
+    const noRelevance = `${input}&page=${page}`
+    const withRelvance = `${noRelevance}&orderby=relevance`
     relevance
-    ? dispatch(getSearch(teste2))
-    : dispatch(getSearch(teste1));
+    ? dispatch(getSearch(withRelvance))
+    : dispatch(getSearch(noRelevance));
   }
 
   const inputHandler = (e) => {
