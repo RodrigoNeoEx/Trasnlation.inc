@@ -2,13 +2,17 @@ import React from 'react';
 import Header from '../../components/Header/Header';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { getSingleById } from '../../redux/slicers/singleById'
+import { getSingleById } from '../../redux/slicers/singleById';
+import  { getTotal }  from '../../redux/slicers/pagesSlice';
+import PaginationButtons from '../../components/SelectPage/PaginationButtons';
 
 const Singles = () => {
   const dispatch = useDispatch();
   const { list } = useSelector((state) => state.search )
   const { status } = useSelector((state) => state.search )
+  // const { total } = useSelector((state) => state.pages)
   const { data, size, pages } = list
+  dispatch(getTotal(pages))
 
   const renderResults = () => {
     return (
@@ -34,6 +38,7 @@ const Singles = () => {
     <Header />
     <p>Artigos: {size}</p>
     <p>Paginas: {pages}</p>
+    <PaginationButtons count={pages}/>
       <section>
         {status === 'loading' ? <p>Loading...</p> : renderResults()}
       </section>
