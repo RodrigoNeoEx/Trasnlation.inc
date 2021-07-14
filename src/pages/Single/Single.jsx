@@ -1,10 +1,9 @@
 import React from"react";
 import Header from "../../components/Header/Header";
-import BtnGoBack from "../../components/Buttons/BtnGoBack";
 import { useSelector } from "react-redux";
 
 const Single = () => {
-  const {  list  } = useSelector((state) => state.single );
+  const { list } = useSelector((state) => state.single );
   const { status } = useSelector((state) => state.single );
 
   const renderResults = () => {
@@ -23,7 +22,6 @@ const Single = () => {
   return (
     <>
       <Header />
-      <BtnGoBack />
       {status === 'loading' ? <p>Loading...</p> : renderResults()}
     </>
   )

@@ -10,7 +10,6 @@ const Singles = () => {
   const dispatch = useDispatch();
   const { list } = useSelector((state) => state.search )
   const { status } = useSelector((state) => state.search )
-  // const { total } = useSelector((state) => state.pages)
   const { data, size, pages } = list
   dispatch(getTotal(pages))
 

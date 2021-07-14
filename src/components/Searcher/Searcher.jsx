@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 import { getSearch } from '../../redux/slicers/searchSlice';
 import { FaSearch } from 'react-icons/fa';
+import BtnGoBack from '../Buttons/BtnGoBack';
 
 const Searcher = () => {
   const dispatch = useDispatch();
-  const history = useHistory()
+  const history = useHistory();
+  const location = useLocation().pathname;
   const [relevance, setRelevance] = useState(false);
   const [page, setPage] = useState(1)
   const [input, setInput] = useState();
@@ -16,7 +18,7 @@ const Searcher = () => {
     !relevance ? setRelevance(true) : setRelevance(false);
   }
 
-  // criar component funcional
+  // criar component funcional para tornar pagina dinamica após aplicação de logica do pagination
 
   function requireApi() {
     const noRelevance = `${input}&page=${page}`
@@ -42,6 +44,7 @@ const Searcher = () => {
         type="checkbox" />
       </label>
       <button type="button" onClick={ requireApi }><FaSearch /></button>
+      { location.includes('/single') && <BtnGoBack /> }
     </>
   )
 }
