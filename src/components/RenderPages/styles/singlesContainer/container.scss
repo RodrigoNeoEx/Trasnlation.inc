@@ -1,0 +1,16 @@
+.singles__container {
+  display: flex;
+  flex-direction: column;
+  .singles__info {
+    justify-content: center;
+    display: flex;
+    line-height: 4vh;
+    margin: 2vh;
+    border-bottom: 1px solid;
+  }
+  .singles__articles {
+    display: flex;
+    flex-direction: column;
+  }
+}
+

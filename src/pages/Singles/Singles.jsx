@@ -10,8 +10,8 @@ const Singles = () => {
   return (
     <main>
     <Header />
-    <PaginationButtons />
     { status === 'loading' ? <p>Loading...</p> : <RenderSingles /> }
+    { status !== 'loading' && <PaginationButtons /> }
     </main>
   )
 }

@@ -24,9 +24,10 @@ const PaginationButtons = () => {
   const dispatch = useDispatch();
   const history = useHistory();
   const classes = useStyles();
-  const [page, setPage] = useState(1);
   const { list } = useSelector((state) => state.search );
+  const { choosedPage } = useSelector((state) => state.pages)
   const { relevanceState, noRelevance, withRelevance} = useSelector((state) => state.relevance );
+  const [page, setPage] = useState();
 
   const requireApi = () => {
     relevanceState
@@ -35,15 +36,15 @@ const PaginationButtons = () => {
     return history.push('./singles')
   }
 
-  const handleChange = (event, value) => {
+  const handleChange = async (event, value) => {
     setPage(value);
     dispatch(getChoosedPage(value))
-    return requireApi()
+    requireApi()
   };
 
   return (
     <div  className={classes.root}>
-      <Box display="flex" justifyContent="center">
+      <Box display="flex"justifyContent="center">
         <Pagination
           count={list.pages}
           showFirstButton
@@ -52,6 +53,7 @@ const PaginationButtons = () => {
           color="primary"
           page={page}
           onChange={ handleChange }
+          defaultPage={choosedPage}
           siblingCount={0}
           boundaryCount={1}
         />
