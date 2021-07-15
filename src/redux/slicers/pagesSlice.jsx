@@ -11,10 +11,10 @@ const pagesSlice = createSlice({
       state.total = payload
     },
     getChoosedPage(state, {payload}) {
-      state.total = payload
+      state.choosedPage = payload
     },
   },
 });
 
-export const { getTotal } = pagesSlice.actions;
+export const { getTotal, getChoosedPage } = pagesSlice.actions;
 export default pagesSlice.reducer;
