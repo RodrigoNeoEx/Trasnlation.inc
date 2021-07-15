@@ -1,0 +1,20 @@
+.btnBack {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 1.5vh;
+  font-size: 4vh;
+  border-radius: 50%;
+  border-left: none;
+  border-top: none;
+  background: none;
+  color: #419fb9;
+  cursor: pointer;
+  border-color: #419fb996;
+}
+
+@media (min-width: 639px) {
+  .btnBack {
+    right: 3vh;
+  }
+}
