@@ -5,14 +5,19 @@ import { useDispatch, useSelector } from 'react-redux';
 import {getChoosedPage} from '../../redux/slicers/pagesSlice';
 import { getSearch } from '../../redux/slicers/searchSlice';
 import { useHistory } from 'react-router-dom';
+import { Box } from '@material-ui/core';
+
 
 const useStyles = makeStyles((theme) => ({
+
   root: {
     '& > *': {
       marginTop: theme.spacing(2),
+
     },
   },
-}));
+})
+);
 
 
 const PaginationButtons = () => {
@@ -37,16 +42,20 @@ const PaginationButtons = () => {
   };
 
   return (
-    <div className={classes.root}>
-      <Pagination
-        count={list.pages}
-        showFirstButton
-        showLastButton
-        variant="outlined"
-        color="primary"
-        page={page}
-        onChange={ handleChange }
-      />
+    <div  className={classes.root}>
+      <Box display="flex" justifyContent="center">
+        <Pagination
+          count={list.pages}
+          showFirstButton
+          showLastButton
+          variant="outlined"
+          color="primary"
+          page={page}
+          onChange={ handleChange }
+          siblingCount={0}
+          boundaryCount={1}
+        />
+      </Box>
     </div>
   );
 }
