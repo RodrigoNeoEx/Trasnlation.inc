@@ -1,0 +1,9 @@
+.home__description {
+  text-align: center;
+  padding: 2vh;
+  font-size: 2.3em;
+  position: absolute;
+  font-weight: 200;
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+}/*# sourceMappingURL=homepage.css.map */
