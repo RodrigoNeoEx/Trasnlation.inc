@@ -3,6 +3,8 @@ import Header from '../../components/Header/Header';
 import RenderSingles from '../../components/RenderPages/RenderSingles';
 import { useSelector } from 'react-redux';
 import PaginationButtons from '../../components/SelectPage/PaginationButtons';
+import CircularIndeterminate from '../../components/Loaging/Loading';
+
 
 const Singles = () => {
   const { status } = useSelector((state) => state.search );
@@ -10,7 +12,7 @@ const Singles = () => {
   return (
     <main>
     <Header />
-    { status === 'loading' ? <p>Loading...</p> : <RenderSingles /> }
+    { status !== 'loading' ? <RenderSingles /> : <CircularIndeterminate />  }
     { status !== 'loading' && <PaginationButtons /> }
     </main>
   )

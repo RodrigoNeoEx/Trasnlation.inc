@@ -2,6 +2,7 @@ import React from"react";
 import Header from "../../components/Header/Header";
 import RenderSingle from "../../components/RenderPages/RenderSingle";
 import { useSelector } from "react-redux";
+import CircularIndeterminate from "../../components/Loaging/Loading";
 
 const Single = () => {
   const { status } = useSelector((state) => state.single );
@@ -9,7 +10,7 @@ const Single = () => {
   return (
     <>
       <Header />
-      {status === 'loading' ? <p>Loading...</p> : <RenderSingle />}
+      {status === 'loading' ? <CircularIndeterminate /> : <RenderSingle />}
     </>
   )
 }
