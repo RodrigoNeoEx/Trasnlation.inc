@@ -5,6 +5,7 @@ import { getSearch } from '../../redux/slicers/searchSlice';
 import { FaSearch } from 'react-icons/fa';
 import BtnGoBack from '../Buttons/BtnGoBack';
 import { getRelevanceUrl, getUrl, setRelevanceState } from '../../redux/slicers/relevanceSlice';
+import './style/searcher.css';
 
 const Searcher = () => {
   const dispatch = useDispatch();
@@ -36,18 +37,38 @@ const Searcher = () => {
   }
 
   return (
-    <>
-      <input type="text" placeholder={placeholder} onChange={ inputHandler }/>
-      <label name="relevance">Relevance
-        <input
+    <section className="search__container">
+      <label
         name="relevance"
-        checked={ relevanceState }
-        onChange={ searchWithRelevance }
-        type="checkbox" />
+        className="search__label"
+      >
+        Search by Relevance
+        <input
+          className="search__checkbox"
+          name="relevance"
+          checked={ relevanceState }
+          onChange={ searchWithRelevance }
+          type="checkbox"
+        />
       </label>
-      <button type="button" onClick={ requireApi }><FaSearch /></button>
+      <div className="search__box">
+        <input
+          className="box__input"
+          type="text"
+          placeholder={placeholder}
+          onChange={ inputHandler }
+        />
+        <button
+          className="box__btn"
+          type="button"
+          onClick={ requireApi }
+        >
+          <FaSearch />
+        </button>
+      </div>
+
       { location.includes('/single') && <BtnGoBack /> }
-    </>
+    </section>
   )
 }
 
