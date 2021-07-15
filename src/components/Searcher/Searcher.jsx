@@ -1,30 +1,32 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, useLocation } from 'react-router-dom';
 import { getSearch } from '../../redux/slicers/searchSlice';
 import { FaSearch } from 'react-icons/fa';
 import BtnGoBack from '../Buttons/BtnGoBack';
+import { getRelevanceUrl, getUrl, setRelevanceState } from '../../redux/slicers/relevanceSlice';
 
 const Searcher = () => {
   const dispatch = useDispatch();
+  const { choosedPage } = useSelector((state) => state.pages );
+  const { relevanceState, noRelevance, withRelevance} = useSelector((state) => state.relevance );
   const history = useHistory();
   const location = useLocation().pathname;
-  const [relevance, setRelevance] = useState(false);
-  const [page, setPage] = useState(1)
   const [input, setInput] = useState();
   const placeholder = 'Busca artículos, noticias, enfermidades, etc...';
 
   const searchWithRelevance = () => {
-    !relevance ? setRelevance(true) : setRelevance(false);
+    !relevanceState
+     ? dispatch(setRelevanceState(true))
+     : dispatch(setRelevanceState(false))
   }
 
-  // criar component funcional para tornar pagina dinamica após aplicação de logica do pagination
+  dispatch(getUrl(`${input}&page=${choosedPage}`))
+  dispatch(getRelevanceUrl(`${input}&page=${choosedPage}&orderby=relevance`))
 
-  function requireApi() {
-    const noRelevance = `${input}&page=${page}`
-    const withRelvance = `${noRelevance}&orderby=relevance`
-    relevance
-    ? dispatch(getSearch(withRelvance))
+  const requireApi = () => {
+    relevanceState
+    ? dispatch(getSearch(withRelevance))
     : dispatch(getSearch(noRelevance));
     return history.push('./singles')
   }
@@ -39,7 +41,7 @@ const Searcher = () => {
       <label name="relevance">Relevance
         <input
         name="relevance"
-        checked={ relevance }
+        checked={ relevanceState }
         onChange={ searchWithRelevance }
         type="checkbox" />
       </label>
