@@ -1,0 +1,13 @@
+.header .header__svg {
+  width: 95vw;
+}
+
+@media (min-width: 639px) {
+  .header {
+    display: flex;
+    justify-content: center;
+  }
+  .header .header__svg {
+    width: 30vw;
+  }
+}/*# sourceMappingURL=header.css.map */
