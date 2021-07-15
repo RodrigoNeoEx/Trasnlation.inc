@@ -1,6 +1,6 @@
 import React from"react";
 import Header from "../../components/Header/Header";
-import RenderSingle from "../../components/RenderPages/RenderSingle";
+import RenderSingles from "../../components/RenderPages/RenderSingles";
 import { useSelector } from "react-redux";
 
 const Single = () => {
@@ -9,7 +9,7 @@ const Single = () => {
   return (
     <>
       <Header />
-      {status === 'loading' ? <p>Loading...</p> : <RenderSingle />}
+      {status === 'loading' ? <p>Loading...</p> : <RenderSingles />}
     </>
   )
 }
