@@ -7,7 +7,11 @@ const Header = () => {
     <>
       <header>
         <img src={logo} alt="logomarca"/>
-        <p><span>Mejor</span><span>con</span><span>Salud</span></p>
+        <p>
+          <span className="blue">Mejor</span>
+          <span className="darkblue">con</span>
+          <span className="pink">Salud</span>
+        </p>
       </header>
       <Searcher />
     </>

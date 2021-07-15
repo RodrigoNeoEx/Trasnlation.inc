@@ -24,7 +24,7 @@ const Searcher = () => {
   dispatch(getUrl(`${input}&page=${choosedPage}`))
   dispatch(getRelevanceUrl(`${input}&page=${choosedPage}&orderby=relevance`))
 
-  const requireApi = () => {
+  const requireApi = async() => {
     relevanceState
     ? dispatch(getSearch(withRelevance))
     : dispatch(getSearch(noRelevance));

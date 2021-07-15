@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { getSingleById } from '../../redux/slicers/singleById';
+import ShowAlert from '../Alert/ShowAlert';
 
 const RenderSingles = () => {
   const dispatch = useDispatch();
@@ -10,6 +11,7 @@ const RenderSingles = () => {
 
   return (
     <main>
+      { pages === 0 && <ShowAlert />}
       <p>Paginas:{pages} - Artigos: {size}</p>
       <section>
         { data.map((single) => {
