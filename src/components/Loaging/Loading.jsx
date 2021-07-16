@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { Box } from '@material-ui/core';
+import './style/loading.css'
 
 
 const CircularIndeterminate = () => {
@@ -19,9 +20,10 @@ const CircularIndeterminate = () => {
   return (
     <div display="flex" className={classes.root}>
       <Box
-       position="absolute"
-       top="35%"
-       left="35%"
+        className="loading"
+        position="absolute"
+        top="35%"
+        left="35%"
        >
          <p>carregando...</p>
         <CircularProgress

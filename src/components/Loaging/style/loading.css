@@ -1,0 +1,12 @@
+@media (min-width: 639px) {
+  .MuiBox-root-2 {
+    top: 25% !important;
+    left: 43% !important;
+  }
+}
+@media (min-width: 765px) {
+  .MuiBox-root-2 {
+    top: 30% !important;
+    left: 44% !important;
+  }
+}/*# sourceMappingURL=loading.css.map */

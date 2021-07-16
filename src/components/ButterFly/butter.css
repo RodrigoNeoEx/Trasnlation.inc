@@ -30,7 +30,7 @@
   border-bottom-left-radius: 94%;
   transform: rotate(0deg);
   border-top-right-radius: 100%;
-  z-index: 5;
+  z-index: 6;
 }
 .container .pink {
   top: 18vh;
@@ -63,6 +63,31 @@
     left: 20vh;
     width: 32vh;
     height: 20vh;
+  }
+}
+@media (min-width: 765px) {
+  .container {
+    top: 28vh;
+    left: 33vw;
+  }
+  .container .blue {
+    top: 19.5vh;
+    left: -0.5vh;
+  }
+  .container .pink {
+    top: 21.5vh;
+    left: 19vh;
+  }
+}
+@media (min-width: 1020px) {
+  .container .blue {
+    left: 0;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    top: 30vh;
+    left: 40vw;
   }
 }
 @-webkit-keyframes blueRotate {

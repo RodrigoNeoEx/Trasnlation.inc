@@ -58,3 +58,17 @@
     }
   }
 }
+
+@media (min-width: 765px) {
+  .search__container {
+    .search__box {
+      .box__btn {
+        width: 7vw;
+      }
+      .box__input {
+        height: 6vh;
+        width: 72vw;
+      }
+    }
+  }
+}

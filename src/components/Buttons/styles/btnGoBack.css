@@ -17,4 +17,19 @@
   .btnBack {
     right: 3vh;
   }
+}
+@media (min-width: 765px) {
+  .btnBack {
+    top: -1vh;
+  }
+}
+@media (min-width: 1020px) {
+  .btnBack {
+    top: 0;
+  }
+}
+@media (min-width: 1420px) {
+  .btnBack {
+    top: 1vh;
+  }
 }/*# sourceMappingURL=btnGoBack.css.map */

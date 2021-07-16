@@ -55,4 +55,13 @@
   .search__container .search__box .box__btn {
     width: 6vw;
   }
+}
+@media (min-width: 765px) {
+  .search__container .search__box .box__btn {
+    width: 7vw;
+  }
+  .search__container .search__box .box__input {
+    height: 6vh;
+    width: 72vw;
+  }
 }/*# sourceMappingURL=searcher.css.map */

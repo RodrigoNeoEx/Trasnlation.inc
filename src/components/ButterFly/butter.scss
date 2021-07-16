@@ -28,7 +28,7 @@
     border-bottom-left-radius: 94%;
     transform: rotate(0deg);
     border-top-right-radius: 100%;
-    z-index: 5;
+    z-index: 6;
   }
   .pink {
     top: 18vh;
@@ -63,6 +63,37 @@
     }
   }
 }
+
+@media (min-width: 765px) {
+  .container {
+    top: 28vh;
+    left: 33vw;
+    .blue {
+      top: 19.5vh;
+      left: -0.5vh;
+    }
+    .pink {
+      top: 21.5vh;
+      left: 19vh;
+    }
+  }
+}
+
+@media (min-width: 1020px) {
+  .container {
+    .blue {
+      left: 0
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    top: 30vh;
+    left: 40vw;
+  }
+}
+
 
 @keyframes blueRotate {
   0% { transform: rotate(34deg);}
