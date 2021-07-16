@@ -1,0 +1,16 @@
+.header {
+  box-shadow: 0px 1px 10px 3px #00000069;
+  .header__svg {
+    width: 85vw;
+  }
+};
+
+@media (min-width: 639px) {
+  .header {
+    display: flex;
+    justify-content: center;
+    .header__svg {
+      width: 30vw;
+    }
+  }
+};

@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# React Challenge 20201113 - Translation.Inc
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### Projeto proposto como desafio técnico da [Coodesh](https://coodesh.com/) com o consumo da API [MejorconSalud]( https://api.beta.mejorconsalud.com/wp-json/mc/v1/)
 
-## Available Scripts
 
-In the project directory, you can run:
+## Scripts necessários para instalação e utilização do App
+
+### `npm install`
+
+Para instalar todas depencias utilizadas, tais como:
+
+- Redux RTK
+- React Redux
+- React Router DOM
+- SASS
+- Material UI
+- React Icons
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Roda o App em ambiente de desenvolvimento.
+Utilize [http://localhost:9045](http://localhost:9045) para visualizar seu desenvolvimento.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Habilidades utilizadas durante desenvolimento
 
-### `npm test`
+- Manipulação e passagem de estados com `React Redux Hooks`
+- Consumo de `API` com `Redux RTK Async Thunk`
+- Dynamic Components
+- `Material UI` e `React Icons` para customização e criação de certos componentes
+- `BEM CSS Pattern `
+- `SASS` / `SCSS`
+- `JavaScript ES6`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Requisitos do Projeto
 
-### `npm run build`
+### HomePage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Ao abrir a Home deverá conter um buscador de artigos para facilitar aos usuários encontrarem conteúdos personalizados sobre saúde e nutrição.
+Deverá ser possível filtrar os artigos por: "Mais Relevantes" no topo.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Ao ter o resultado é necessário adicionar alguns elementos importantes como:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- A páginação para navegar entre os resultados
+- Buscador para realizar a busca novamente
+- Adicionar a quantidade de elementos encontrados
+- Tratar o resultado sem artigos `Mensagem: "Não existem artigos relacionados ao termo pesquisado!"`
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Tela do Single
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Após pesquisar, deverá ser possível abrir o artigo. Para isso precisamos de uma tela para exibir o conteúdo do artigo.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### Na página do single de um artigo deverá conter alguns elementos básicos:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- título
+- categoria,
+- data de publicação
+- conteúdo(texto para leitura)
+- tags
+- biografias e nome do autor.
 
-## Learn More
+# Deploy
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Realizado deploy atravé da plataforma [Vercel](https://vercel.com/)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### <a href="#">Transition Inc </a>
