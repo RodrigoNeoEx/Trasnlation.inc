@@ -13,6 +13,7 @@ const CircularIndeterminate = () => {
       },
     },
   }));
+
   const classes = useStyles();
 
   return (
