@@ -12,8 +12,14 @@
 .single__container .single__author {
   position: relative;
   top: -8vh;
-  right: -1vh;
+  right: -7vh;
   font-size: 0.8em;
+  background-color: rgba(255, 255, 255, 0.349);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  max-width: 65vw;
+  border-top-left-radius: 2vh;
+  border-top-right-radius: 2vh;
 }
 .single__container .single__title {
   margin-top: -4vh;
@@ -46,6 +52,17 @@
 
   .single__container .single__author {
     top: -14vh;
-    right: -2vh;
+    right: -13vw;
+    text-align: center;
+  }
+}
+@media (min-width: 765px) {
+  .single__container .single__author {
+    top: -11vh;
+  }
+}
+@media (min-width: 1420px) {
+  .single__container .single__author {
+    top: -10vh;
   }
 }/*# sourceMappingURL=single.css.map */
