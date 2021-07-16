@@ -4,12 +4,19 @@
   margin: 1vh 5vw;
 }
 .single__container .single__img {
+  margin-top: 1vh;
   width: 90vw;
   border-radius: 2vh;
   display: flex;
 }
+.single__container .single__author {
+  position: relative;
+  top: -8vh;
+  right: -1vh;
+  font-size: 0.8em;
+}
 .single__container .single__title {
-  margin-top: 1vh;
+  margin-top: -4vh;
   font-size: 1.4em;
 }
 .single__container .single__article {
@@ -20,6 +27,7 @@
 .single__container .single__article img {
   width: 90vw;
   border-radius: 2vh;
+  max-height: 50vh;
 }
 .single__container .single__article p {
   margin: 1vh;
@@ -27,9 +35,17 @@
 .single__container .single__article h2 {
   text-align: center;
 }
+.single__container .single__bibliography {
+  margin-bottom: 0;
+}
 
 @media (min-width: 639px) {
   .single__container :is(img) {
-    height: 60vh;
+    max-height: 60vh;
+  }
+
+  .single__container .single__author {
+    top: -14vh;
+    right: -2vh;
   }
 }/*# sourceMappingURL=single.css.map */

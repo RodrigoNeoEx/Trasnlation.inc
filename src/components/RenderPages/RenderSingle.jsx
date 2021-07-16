@@ -1,6 +1,7 @@
 import React from"react";
 import { useSelector } from "react-redux";
 import './styles/single/single.css';
+import TabsInfo from "../TabsInfo/TabsInfo";
 
 const RenderSingle = () => {
   const { list } = useSelector((state) => state.single );
@@ -9,16 +10,15 @@ const RenderSingle = () => {
     <main className="single__container" key={list.id} >
       <title>{list.title}</title>
       <meta name="description" content={list.excerpt}/>
-      <p>{list.categories[0].name}</p>
-      <p>{list.categories[0].description}</p>
-      <p>{list.tags[0].name}</p>
-      <p>{list.tags[1].name}</p>
-      <p>Author: {list.author.name}</p>
-      <p>Published date: {list.published}</p>
+      <TabsInfo />
       <img className="single__img" src={list.featured_media.thumbnail} alt="card img"/>
+      <div className="single__author">
+        <p>Author: {list.author.name}</p>
+        <p>Published date: {list.published}</p>
+      </div>
       <h1 className="single__title">{list.headline}</h1>
       <article className="single__article"dangerouslySetInnerHTML={{__html:list.content}}/>
-      <p>Bibliography</p>
+      <h3>Bibliography</h3>
       <p className="single__article"dangerouslySetInnerHTML={{__html:list.bibliography}}/>
     </main>
   );
