@@ -2,8 +2,6 @@
 
 #### Projeto proposto como desafio técnico da [Coodesh](https://coodesh.com/) com o consumo da API [MejorconSalud]( https://api.beta.mejorconsalud.com/wp-json/mc/v1/)
 
-#### Projeto até o momento encontra-se com layout finalizado somente mobile
-
 ## Scripts necessários para instalação e utilização do App
 
 ### `npm install`
