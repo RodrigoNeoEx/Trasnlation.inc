@@ -20,7 +20,6 @@ const CircularIndeterminate = () => {
   return (
     <div display="flex" className={classes.root}>
       <Box
-        className="loading"
         position="absolute"
         top="35%"
         left="35%"

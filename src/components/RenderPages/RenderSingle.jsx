@@ -18,7 +18,7 @@ const RenderSingle = () => {
       </div>
       <h1 className="single__title">{list.headline}</h1>
       <article className="single__article"dangerouslySetInnerHTML={{__html:list.content}}/>
-      <h3>Bibliography</h3>
+      <h3 className="single__bibliography">Bibliography</h3>
       <p className="single__article"dangerouslySetInnerHTML={{__html:list.bibliography}}/>
     </main>
   );
