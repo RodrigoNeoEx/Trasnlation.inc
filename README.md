@@ -2,6 +2,7 @@
 
 #### Projeto proposto como desafio técnico da [Coodesh](https://coodesh.com/) com o consumo da API [MejorconSalud]( https://api.beta.mejorconsalud.com/wp-json/mc/v1/)
 
+<hr/>
 
 ## Scripts necessários para instalação e utilização do App
 
@@ -16,10 +17,48 @@ Para instalar todas depencias utilizadas, tais como:
 - Material UI
 - React Icons
 
+### `npm run allDep`
+
+Script de instalação para as depencias/libs abaixo:
+
+- react-router-dom
+- redux
+- react-redux
+- redux-devtools-extension
+- reduxjs toolkit
+- react-icons
+- sass
+- react-bootstrap v4.6.0
+- popper.js
+- material-ui/lab
+- material-ui/core
+
+### `npm run allRedux`
+
+Script de instalação do Redux contendo as seguintes instalações:
+
+- redux
+- react-redux
+- redux-devtools-extension
+- reduxjs/toolkit
+
+### `npm run libs`
+
+Script de instalação constendo as seguintes libs:
+
+- react-icons
+- sass
+- react-bootstrap v4.6.0
+- popper.js --save
+- material-ui/lab
+- material-ui/core
+
 ### `npm start`
 
 Roda o App em ambiente de desenvolvimento.
 Utilize [http://localhost:9045](http://localhost:9045) para visualizar seu desenvolvimento.
+
+<hr/>
 
 ## Habilidades utilizadas durante desenvolimento
 
@@ -30,6 +69,8 @@ Utilize [http://localhost:9045](http://localhost:9045) para visualizar seu desen
 - `BEM CSS Pattern `
 - `SASS` / `SCSS`
 - `JavaScript ES6`
+
+<hr/>
 
 ## Requisitos do Projeto
 
@@ -59,8 +100,12 @@ Após pesquisar, deverá ser possível abrir o artigo. Para isso precisamos de u
 - tags
 - biografias e nome do autor.
 
+<hr/>
+
 # Deploy
 
-### Realizado deploy atravé da plataforma [Vercel](https://vercel.com/)
+#### Realizado deploy atravé da plataforma [Vercel](https://vercel.com/)
+#### Link do deploy: <a href="#">Transition Inc </a>
 
-#### <a href="#">Transition Inc </a>
+<hr/>
+
