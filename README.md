@@ -105,6 +105,6 @@ Após pesquisar, deverá ser possível abrir o artigo. Para isso precisamos de u
 # Deploy
 
 #### Realizado deploy atravé da plataforma [Vercel](https://vercel.com/)
-#### Link do deploy: <a href="https://trasnlation-inc.vercel.app/">Transition Inc </a>
+#### Link do deploy: <a href="https://trasnlation-inc.vercel.app/">Trasnlation-inc </a>
 
 <hr/>
