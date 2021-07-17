@@ -108,4 +108,3 @@ Após pesquisar, deverá ser possível abrir o artigo. Para isso precisamos de u
 #### Link do deploy: <a href="#">Transition Inc </a>
 
 <hr/>
-
