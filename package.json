@@ -27,7 +27,21 @@
     "start": "PORT=9045 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "router": "npm install react-router-dom",
+    "redux": "npm install --save redux",
+    "reduxR": "npm install --save react-redux",
+    "devT": "npm install --save redux-devtools-extension",
+    "rtk": "npm install @reduxjs/toolkit",
+    "allRedux": "npm run redux && npm run reduxR && npm run devT && npm run rtk",
+    "icons": "npm install react-icons --save",
+    "sass": "npm install --save-dev sass",
+    "boot": "npm install react-bootstrap bootstrap@4.6.0",
+    "pop": "npm install popper.js --save",
+    "muiL": "npm install @material-ui/lab",
+    "muiC": "npm install @material-ui/core",
+    "libs": "npm run icons && npm run sass && npm run boot && npm run pop && npm run muiL && npm run muiC",
+    "allDep": "npm run router && npm run allRedux && npm run libs"
   },
   "eslintConfig": {
     "extends": [
