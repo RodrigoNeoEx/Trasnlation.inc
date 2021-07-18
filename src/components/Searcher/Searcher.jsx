@@ -29,6 +29,10 @@ const Searcher = () => {
     relevanceState
     ? dispatch(getSearch(withRelevance))
     : dispatch(getSearch(noRelevance));
+    if(location.includes('single/')) {
+      history.goBack()
+      return history.push('./singles')
+    }
     return history.push('./singles')
   }
 
