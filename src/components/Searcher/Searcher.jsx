@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, useLocation } from 'react-router-dom';
 import { getSearch } from '../../redux/slicers/searchSlice';
@@ -16,24 +16,27 @@ const Searcher = () => {
   const [input, setInput] = useState();
   const placeholder = 'Busca artículos, noticias, enfermidades, etc...';
 
+
   const searchWithRelevance = () => {
     !relevanceState
      ? dispatch(setRelevanceState(true))
-     : dispatch(setRelevanceState(false))
-  }
+     : dispatch(setRelevanceState(false));
+  };
 
-  dispatch(getUrl(`${input}&page=${choosedPage}`))
-  dispatch(getRelevanceUrl(`${input}&page=${choosedPage}&orderby=relevance`))
+  useEffect(() => {
+    dispatch(getUrl(`${input}&page=${choosedPage}`))
+    dispatch(getRelevanceUrl(`${input}&page=${choosedPage}&orderby=relevance`))
+  },[choosedPage, dispatch, input]);
 
-  const requireApi = async() => {
+  const requireApi = () => {
     relevanceState
     ? dispatch(getSearch(withRelevance))
     : dispatch(getSearch(noRelevance));
     if(location.includes('single/')) {
-      history.goBack()
-      return history.push('./singles')
+      history.goBack();
+      return history.push('./singles');
     }
-    return history.push('./singles')
+    return history.push('./singles');
   }
 
   const inputHandler = (e) => {

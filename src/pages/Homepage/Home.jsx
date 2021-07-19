@@ -1,7 +1,7 @@
 import React from 'react';
 import ButterFly from '../../components/ButterFly/Butterfly';
 import Header from '../../components/Header/Header';
-import './style/homepage.css'
+import './style/homepage.css';
 
 const Home = () => {
   return (

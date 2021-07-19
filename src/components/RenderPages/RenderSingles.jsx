@@ -6,7 +6,6 @@ import ShowAlert from '../Alert/ShowAlert';
 import './styles/singlesContainer/container.css';
 import './styles/singlesCards/cards.css';
 
-
 const RenderSingles = () => {
   const dispatch = useDispatch();
   const { list } = useSelector((state) => state.search );
@@ -14,7 +13,7 @@ const RenderSingles = () => {
 
   return (
     <main className="singles__container">
-      { pages === 0 && <ShowAlert />}
+      { pages === 0 && <ShowAlert /> }
       <p className="singles__info">Paginas:{pages} - Artigos: {size}</p>
       <section className="singles__articles">
         { data.map((single) => {
@@ -35,11 +34,11 @@ const RenderSingles = () => {
                   </button>
                 </Link>
               </article>
-            )
+            );
         })}
       </section>
     </main>
-  )
-}
+  );
+};
 
 export default RenderSingles;

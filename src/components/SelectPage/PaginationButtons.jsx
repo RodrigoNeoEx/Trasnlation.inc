@@ -5,8 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import {getChoosedPage} from '../../redux/slicers/pagesSlice';
 import { getSearch } from '../../redux/slicers/searchSlice';
 import { useHistory } from 'react-router-dom';
-import { Box } from '@material-ui/core';
-
+import { Box, Typography } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
 
@@ -19,13 +18,12 @@ const useStyles = makeStyles((theme) => ({
 })
 );
 
-
 const PaginationButtons = () => {
   const dispatch = useDispatch();
   const history = useHistory();
   const classes = useStyles();
   const { list } = useSelector((state) => state.search );
-  const { choosedPage } = useSelector((state) => state.pages)
+  const { choosedPage } = useSelector((state) => state.pages);
   const { relevanceState, noRelevance, withRelevance} = useSelector((state) => state.relevance );
   const [page, setPage] = useState();
 
@@ -33,18 +31,19 @@ const PaginationButtons = () => {
     relevanceState
     ? dispatch(getSearch(withRelevance))
     : dispatch(getSearch(noRelevance));
-    return history.push('./singles')
+    return history.push('/singles');
   }
 
-  const handleChange = async (event, value) => {
+  const handleChange = (event, value) => {
     setPage(value);
-    dispatch(getChoosedPage(value))
-    requireApi()
+    dispatch(getChoosedPage(value));
+    return requireApi();
   };
 
   return (
-    <div  className={classes.root}>
+    <div className={classes.root}>
       <Box display="flex"justifyContent="center">
+      <Typography>Page: {choosedPage}</Typography>
         <Pagination
           count={list.pages}
           showFirstButton
@@ -52,8 +51,8 @@ const PaginationButtons = () => {
           variant="outlined"
           color="primary"
           page={page}
-          onChange={ handleChange }
           defaultPage={choosedPage}
+          onChange={ handleChange }
           siblingCount={0}
           boundaryCount={1}
         />

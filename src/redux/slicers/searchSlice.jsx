@@ -4,7 +4,7 @@ export const getSearch = createAsyncThunk(
   'singles/getSearch',
   async(input) => {
     return fetch(`https://api.beta.mejorconsalud.com/wp-json/mc/v2/posts?search=${input}`)
-    .then( res => res.json())
+    .then( res => res.json());
   }
 );
 

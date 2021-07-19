@@ -5,15 +5,14 @@ import { useSelector } from 'react-redux';
 import PaginationButtons from '../../components/SelectPage/PaginationButtons';
 import CircularIndeterminate from '../../components/Loaging/Loading';
 
-
 const Singles = () => {
   const { status } = useSelector((state) => state.search );
 
   return (
     <main>
     <Header />
-    { status !== 'loading' ? <RenderSingles /> : <CircularIndeterminate />  }
     { status !== 'loading' && <PaginationButtons /> }
+    { status !== 'loading' ? <RenderSingles /> : <CircularIndeterminate />  }
     </main>
   )
 }

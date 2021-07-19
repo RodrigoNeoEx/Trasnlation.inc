@@ -1,6 +1,6 @@
 import React from 'react';
 import Searcher from '../Searcher/Searcher';
-import './style/header.css'
+import './style/header.css';
 
 const Header = () => {
   return (
@@ -27,7 +27,7 @@ const Header = () => {
       </header>
       <Searcher />
     </>
-  )
-}
+  );
+};
 
 export default Header;
