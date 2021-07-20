@@ -42,6 +42,17 @@
   width: 3vh;
 }
 
+.pagination {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.pagination .pagination__btn {
+  width: 20vw;
+  border-radius: 1vh;
+  cursor: pointer;
+}
+
 @media (min-width: 639px) {
   .search__container {
     margin-top: 2vh;

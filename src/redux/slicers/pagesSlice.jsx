@@ -1,20 +1,20 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const pagesSlice = createSlice({
-  name: 'totalOfPages',
+  name: 'pages',
   initialState: {
-    total: 1,
-    choosedPage: 1,
+    pageName: '',
+    choosed: 1,
   },
   reducers: {
-    getTotal(state, {payload}) {
-      state.total = payload
+    getPageName(state, {payload}) {
+      state.pageName = payload
     },
     getChoosedPage(state, {payload}) {
-      state.choosedPage = payload
+      state.choosed = payload
     },
   },
 });
 
-export const { getTotal, getChoosedPage } = pagesSlice.actions;
+export const { getPageName, getChoosedPage } = pagesSlice.actions;
 export default pagesSlice.reducer;
