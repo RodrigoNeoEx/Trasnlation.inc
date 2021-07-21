@@ -1,80 +1,83 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, useLocation } from 'react-router-dom';
 import { getSearch } from '../../redux/slicers/searchSlice';
-import { FaSearch } from 'react-icons/fa';
 import BtnGoBack from '../Buttons/BtnGoBack';
-import { getRelevanceUrl, getUrl, setRelevanceState } from '../../redux/slicers/relevanceSlice';
+import { FaSearch } from 'react-icons/fa';
 import './style/searcher.css';
+import { getPageName, getChoosedPage } from '../../redux/slicers/pagesSlice';
+import Pagination from '../Pagination/Pagination'
 
 const Searcher = () => {
   const dispatch = useDispatch();
-  const { choosedPage } = useSelector((state) => state.pages );
-  const { relevanceState, noRelevance, withRelevance} = useSelector((state) => state.relevance );
+  const { choosed } = useSelector((state) => state.pages)
   const history = useHistory();
   const location = useLocation().pathname;
   const [input, setInput] = useState();
+  const [relevance, setRelevance] = useState(false)
   const placeholder = 'Busca artículos, noticias, enfermidades, etc...';
 
 
   const searchWithRelevance = () => {
-    !relevanceState
-     ? dispatch(setRelevanceState(true))
-     : dispatch(setRelevanceState(false));
-  };
-
-  useEffect(() => {
-    dispatch(getUrl(`${input}&page=${choosedPage}`))
-    dispatch(getRelevanceUrl(`${input}&page=${choosedPage}&orderby=relevance`))
-  },[choosedPage, dispatch, input]);
-
-  const requireApi = () => {
-    relevanceState
-    ? dispatch(getSearch(withRelevance))
-    : dispatch(getSearch(noRelevance));
-    if(location.includes('single/')) {
-      history.goBack();
-      return history.push('./singles');
+    if(!relevance) {
+      return setRelevance(true);
     }
-    return history.push('./singles');
+    return setRelevance(false)
   }
 
-  const inputHandler = (e) => {
-    setInput(e.target.value);
+  const requireApi =  () => {
+    const defaultPage = 1
+    dispatch(getChoosedPage(defaultPage));
+
+    const inputUrl = !relevance
+    ? `${input}&page=${defaultPage}`
+    : `${input}&page=${defaultPage}&orderby=relevance`;
+
+    dispatch(getPageName(input))
+    dispatch(getSearch(inputUrl))
+
+    if(location.includes('/singles/')) {
+      return history.push(`${choosed}`)
+    }
+    return history.push(`/singles/${defaultPage}`)
   }
 
   return (
     <section className="search__container">
-      <label
-        name="relevance"
-        className="search__label"
-      >
-        Search by Relevance
-        <input
-          className="search__checkbox"
+      {!location.includes('/single/') &&
+      <>
+        <label
           name="relevance"
-          checked={ relevanceState }
-          onChange={ searchWithRelevance }
-          type="checkbox"
-        />
-      </label>
-      <div className="search__box">
-        <input
-          className="box__input"
-          type="text"
-          placeholder={placeholder}
-          onChange={ inputHandler }
-        />
-        <button
-          className="box__btn"
-          type="button"
-          onClick={ requireApi }
+          className="search__label"
         >
-          <FaSearch />
-        </button>
-      </div>
-
-      { location.includes('/single') && <BtnGoBack /> }
+          Search by Relevance
+          <input
+            className="search__checkbox"
+            name="relevance"
+            checked={ relevance }
+            onChange={ searchWithRelevance }
+            type="checkbox"
+          />
+        </label>
+        <div className="search__box">
+          <input
+            className="box__input"
+            type="text"
+            placeholder={ placeholder }
+            onChange={ (e) => setInput(e.target.value) }
+          />
+          <button
+            className="box__btn"
+            type="button"
+            onClick={ requireApi }
+          >
+            <FaSearch />
+          </button>
+        </div>
+      </>
+      }
+      { location.includes('/single/') && <BtnGoBack />}
+      { location.includes('/singles/') && <Pagination state={relevance}/> }
     </section>
   )
 }

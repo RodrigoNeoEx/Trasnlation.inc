@@ -12,7 +12,8 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     backgroundColor: '#000bff17',
     borderRadius: '10px',
-    lineBreak: 'anywhere'
+    lineBreak: 'anywhere',
+    width: '90vw',
   },
 }));
 

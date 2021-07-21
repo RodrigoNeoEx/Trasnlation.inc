@@ -4,6 +4,9 @@
 .header .header__svg {
   width: 85vw;
 }
+.header .header__svg :hover {
+  cursor: pointer;
+}
 
 @media (min-width: 639px) {
   .header {

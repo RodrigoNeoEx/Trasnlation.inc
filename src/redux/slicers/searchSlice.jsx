@@ -3,10 +3,11 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 export const getSearch = createAsyncThunk(
   'singles/getSearch',
   async(input) => {
-    return fetch(`https://api.beta.mejorconsalud.com/wp-json/mc/v2/posts?search=${input}`)
-    .then( res => res.json());
+    return await fetch(`https://api.beta.mejorconsalud.com/wp-json/mc/v2/posts?search=${input}`)
+    .then( res => res.json())
   }
 );
+
 
 const searchSlice = createSlice({
   name: 'search',

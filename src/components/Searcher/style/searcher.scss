@@ -2,6 +2,8 @@
   margin-top: 1vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   .search__box {
     height: 6vh;
     display: flex;
@@ -45,11 +47,9 @@
 @media (min-width: 639px) {
   .search__container {
     margin-top: 2vh;
-    flex-direction: row;
     justify-content: space-around;
     .search__box {
       .box__input {
-        width: 70vw;
         position: relative;
       };
       .box__btn {
@@ -67,8 +67,8 @@
       };
       .box__input {
         height: 6vh;
-        width: 72vw;
-      };
-    };
-  };
-};
+        width: 92vw;
+      }
+    }
+  }
+}

@@ -7,7 +7,7 @@ const BtnGoBack = () => {
   const history = useHistory()
   return (
     <button
-      onClick={history.goBack}
+      onClick={ () => history.push('/')}
       className="btnBack"
     >
       <TiArrowBack />
