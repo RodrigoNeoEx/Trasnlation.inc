@@ -10,10 +10,6 @@ const Singles = () => {
   return (
     <main>
     <Header />
-<<<<<<< HEAD
-=======
-    { status !== 'loading' && <PaginationButtons /> }
->>>>>>> 4875d1ab0e7e9d46de53ceca2529b0da6ff8ec10
     { status !== 'loading' ? <RenderSingles /> : <CircularIndeterminate />  }
     </main>
   )
