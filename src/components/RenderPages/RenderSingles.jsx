@@ -30,7 +30,7 @@ const RenderSingles = () => {
                   className="card__btn"
                   onClick={() => dispatch(getSingleById(single.id))}
                   >
-                    Detalhes do Artigo
+                    Article details
                   </button>
                 </Link>
               </article>
