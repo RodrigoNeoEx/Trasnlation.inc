@@ -53,4 +53,22 @@
   .pagination .next svg {
     right: 23vh;
   }
+}
+@media (min-width: 1024px) {
+  .pagination {
+    font-size: 3vh;
+  }
+  .pagination .pagination__btn {
+    font-size: 3vh;
+  }
+  .pagination .pagination__btn svg {
+    font-size: 8vh;
+    top: 23%;
+  }
+  .pagination .prev svg {
+    left: 40vh;
+  }
+  .pagination .next svg {
+    right: 40vh;
+  }
 }/*# sourceMappingURL=pagination.css.map */

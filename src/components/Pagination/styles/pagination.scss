@@ -59,3 +59,22 @@
     }
   }
 }
+
+@media (min-width: 1024px) {
+  .pagination {
+    font-size: 3vh;
+    .pagination__btn {
+      font-size: 3vh;
+      svg {
+       font-size: 8vh;
+       top: 23%;
+     }
+    }
+    .prev svg {
+      left: 40vh;
+    }
+    .next svg {
+      right: 40vh;
+    }
+  }
+}
