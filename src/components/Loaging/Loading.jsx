@@ -24,7 +24,7 @@ const CircularIndeterminate = () => {
         top="35%"
         left="35%"
        >
-         <p>carregando...</p>
+         <p>Loading...</p>
         <CircularProgress
           size={100}
         />
