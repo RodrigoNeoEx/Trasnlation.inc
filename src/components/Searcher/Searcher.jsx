@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, useLocation } from 'react-router-dom';
 import { getSearch } from '../../redux/slicers/searchSlice';
-import BtnGoBack from '../Buttons/BtnGoBack';
+import BtnGoBack from '../Buttons/BtnBack/BtnGoBack';
 import { FaSearch } from 'react-icons/fa';
 import './style/searcher.css';
 import { getPageName, getChoosedPage } from '../../redux/slicers/pagesSlice';

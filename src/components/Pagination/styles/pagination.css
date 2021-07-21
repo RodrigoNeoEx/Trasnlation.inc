@@ -1,0 +1,56 @@
+.pagination {
+  display: flex;
+  width: 90vw;
+  justify-content: space-around;
+  font-size: 2vh;
+}
+.pagination .pagination__btn {
+  background-color: transparent;
+  border: none;
+  font-weight: 700;
+  text-align: center;
+  width: 30vw;
+  color: #153942;
+}
+.pagination .pagination__btn svg {
+  position: absolute;
+  font-size: 8vh;
+  color: rgba(65, 159, 185, 0.41);
+  top: 19%;
+  transition: linear 0.2s;
+}
+.pagination .pagination__btn svg :active {
+  transition: linear 0.2s;
+  color: #33606d;
+}
+
+@media (min-width: 639px) {
+  .pagination {
+    font-size: 5vh;
+  }
+  .pagination .pagination__btn svg {
+    font-size: 10vh;
+    top: 24%;
+  }
+  .pagination .prev svg {
+    left: 34vh;
+  }
+  .pagination .next svg {
+    right: 34vh;
+  }
+}
+@media (min-width: 760px) {
+  .pagination {
+    font-size: 3vh;
+  }
+  .pagination .pagination__btn svg {
+    font-size: 8vh;
+    top: 19%;
+  }
+  .pagination .prev svg {
+    left: 23vh;
+  }
+  .pagination .next svg {
+    right: 23vh;
+  }
+}/*# sourceMappingURL=pagination.css.map */

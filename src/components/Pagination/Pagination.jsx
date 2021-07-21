@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { getSearch } from '../../redux/slicers/searchSlice';
 import { getChoosedPage } from '../../redux/slicers/pagesSlice';
+import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
+import './styles/pagination.css';
 
 
 const Pagination = ({ relevance }) => {
@@ -44,16 +46,18 @@ const Pagination = ({ relevance }) => {
         <button
           type="button"
           onClick={ previousPage }
-          className="pagination__btn"
+          className="pagination__btn prev"
           >
-          Previous Page
+          <FaArrowCircleLeft />
+          Prev Page
         </button>
-        <p>page: {choosed} of {pages}</p>
+        <p className="pagination__info">Page: {choosed} of {pages}</p>
         <button
           type="button"
           onClick={ nextPage }
-          className="pagination__btn"
+          className="pagination__btn next"
           >
+          <FaArrowCircleRight />
           Next Page
         </button>
     </section>
