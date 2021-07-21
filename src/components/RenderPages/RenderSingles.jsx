@@ -39,7 +39,7 @@ const RenderSingles = () => {
         })};
       </section>
     </main>
-  )
-}
+  );
+};
 
 export default RenderSingles;

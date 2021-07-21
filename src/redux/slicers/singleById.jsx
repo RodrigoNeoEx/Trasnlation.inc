@@ -4,7 +4,7 @@ export const getSingleById = createAsyncThunk(
   'single/getSingleById',
   async(id) => {
     return fetch(`https://api.beta.mejorconsalud.com/wp-json/mc/v1/posts/${id}`)
-    .then( res => res.json())
+    .then( res => res.json());
   }
 )
 

@@ -9,6 +9,6 @@ const store = configureStore({
     single: singleIDReducer,
     pages: pagesReducer,
   },
-})
+});
 
 export default store;

@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { Box } from '@material-ui/core';
-import './style/loading.css'
+import './style/loading.css';
 
 
 const CircularIndeterminate = () => {
@@ -31,6 +31,6 @@ const CircularIndeterminate = () => {
       </Box>
     </div>
   );
-}
+};
 
 export default CircularIndeterminate;

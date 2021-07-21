@@ -16,7 +16,7 @@
     transform: rotate(34deg);
     border-top-right-radius: 100%;
     animation: blueRotate 1s linear infinite;
-  }
+  };
   .darkblue {
     background-color: #419fb9eb;
     top: 37vh;
@@ -29,7 +29,7 @@
     transform: rotate(0deg);
     border-top-right-radius: 100%;
     z-index: 6;
-  }
+  };
   .pink {
     top: 18vh;
     left: 12vh;
@@ -44,8 +44,8 @@
     border-top-right-radius: 100%;
     z-index: -1;
     animation: pinkRotate 1s linear infinite;
-  }
-}
+  };
+};
 
 @media (min-width: 639px) {
   .container {
@@ -54,15 +54,15 @@
     .blue {
       top: 21vh;
       left: 0.7vh;
-    }
+    };
     .pink {
       top: 23vh;
       left: 20vh;
       width: 32vh;
       height: 20vh;
-    }
-  }
-}
+    };
+  };
+};
 
 @media (min-width: 765px) {
   .container {
@@ -71,38 +71,38 @@
     .blue {
       top: 19.5vh;
       left: -0.5vh;
-    }
+    };
     .pink {
       top: 21.5vh;
       left: 19vh;
-    }
-  }
-}
+    };
+  };
+};
 
 @media (min-width: 1020px) {
   .container {
     .blue {
       left: 0
-    }
-  }
-}
+    };
+  };
+};
 
 @media (min-width: 1400px) {
   .container {
     top: 30vh;
     left: 40vw;
-  }
-}
+  };
+};
 
 
 @keyframes blueRotate {
   0% { transform: rotate(34deg);}
   50% { transform: rotate(39deg);}
   100% { transform: rotate(34deg);}
-}
+};
 
 @keyframes pinkRotate {
   0% { transform: rotate(77deg);}
   50% { transform: rotate(72deg);}
   100% { transform: rotate(77deg);}
-}
+};

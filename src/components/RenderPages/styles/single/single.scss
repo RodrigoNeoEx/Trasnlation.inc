@@ -7,7 +7,7 @@
     width: 90vw;
     border-radius: 2vh;
     display: flex;
-  }
+  };
   .single__author {
     position: relative;
     top: -8vh;
@@ -18,11 +18,11 @@
     max-width: 65vw;
     border-top-left-radius: 2vh;
     border-top-right-radius: 2vh;
-  }
+  };
   .single__title {
     margin-top: -4vh;
     font-size: 1.4em;
-  }
+  };
   .single__article {
     display: flex;
     flex-direction: column;
@@ -31,44 +31,44 @@
       width: 90vw;
       border-radius: 2vh;
       max-height: 50vh;
-    }
+    };
     p {
       margin: 1vh;
-    }
+    };
     h2 {
       text-align: center;
-    }
-  }
+    };
+  };
   .single__bibliography {
     margin-bottom: 0;
-  }
-}
+  };
+};
 
 @media (min-width: 639px) {
   .single__container :is(img) {
     max-height: 60vh;
-  }
+  };
   .single__container {
     .single__author {
       top: -14vh;
       right: -13vw;
       text-align: center;
-    }
-  }
-}
+    };
+  };
+};
 
 @media (min-width: 765px) {
   .single__container {
     .single__author {
       top: -11vh;
-    }
-  }
-}
+    };
+  };
+};
 
 @media (min-width: 1420px) {
   .single__container {
     .single__author {
       top: -10vh;
-    }
-  }
-}
+    };
+  };
+};

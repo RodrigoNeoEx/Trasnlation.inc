@@ -1,7 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import Searcher from '../Searcher/Searcher';
-import './style/header.css'
+import './style/header.css';
 
 const Header = () => {
   const history = useHistory()
@@ -29,7 +29,7 @@ const Header = () => {
       </header>
       <Searcher />
     </>
-  )
-}
+  );
+};
 
 export default Header;

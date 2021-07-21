@@ -1,9 +1,7 @@
 import React from"react";
 import { useHistory } from "react-router";
-import { TiArrowBack } from "react-icons/ti"
-import './styles/btnGoBack.css'
-
-
+import { TiArrowBack } from "react-icons/ti";
+import './styles/btnGoBack.css';
 
 const BtnGoBack = () => {
   const history = useHistory()
@@ -14,7 +12,7 @@ const BtnGoBack = () => {
     >
       <TiArrowBack />
     </button>
-  )
-}
+  );
+};
 
 export default BtnGoBack;

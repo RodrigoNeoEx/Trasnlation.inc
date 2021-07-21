@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
 
 const TabsInfo = () => {
   const { list } = useSelector((state) => state.single );
-  const { categories, tags } = list
+  const { categories, tags } = list;
   const classes = useStyles();
   const [value, setValue] = useState(1);
 
@@ -43,7 +43,7 @@ const TabsInfo = () => {
                 value={index}
                 centered
               />
-            )})
+            );})
           }
           { tags.map((tag, index) => {
             return (
@@ -53,8 +53,8 @@ const TabsInfo = () => {
               value={index +1}
               centered
             />
-            )
-          })}
+            );})
+          }
           </TabList>
         </AppBar>
         { categories.map((categorie, index) => {
@@ -65,7 +65,7 @@ const TabsInfo = () => {
               >
                 {categorie.description}
               </TabPanel>
-            )})
+            ); })
           }
           { tags.map((tag, index) => {
             return (
@@ -76,11 +76,11 @@ const TabsInfo = () => {
               <p>Maiores informações:</p>
               <a href={tag.link}>{tag.link}</a>
             </TabPanel>
-          )})
+          ); })
         }
       </TabContext>
     </div>
   );
-}
+};
 
 export default TabsInfo;

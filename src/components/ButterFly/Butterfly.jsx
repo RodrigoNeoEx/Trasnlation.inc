@@ -8,7 +8,7 @@ const ButterFly = () => {
       <div className="darkblue"></div>
       <div className="pink"></div>
     </div>
-  )
-}
+  );
+};
 
 export default ButterFly;

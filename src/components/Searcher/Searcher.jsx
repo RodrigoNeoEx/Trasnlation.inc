@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, useLocation } from 'react-router-dom';
 import { getSearch } from '../../redux/slicers/searchSlice';
@@ -16,6 +16,7 @@ const Searcher = () => {
   const [input, setInput] = useState();
   const [relevance, setRelevance] = useState(false)
   const placeholder = 'Busca artículos, noticias, enfermidades, etc...';
+
 
   const searchWithRelevance = () => {
     if(!relevance) {
